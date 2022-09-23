@@ -515,9 +515,11 @@
         <div class="control" data-id="portfolio">
             <i class="fas fa-briefcase"></i>
         </div>
-        <div class="control" data-id="blogs">
-            <i class="far fa-newspaper"></i>
-        </div>
+        <a href="marvel/mcu.html">
+            <div class="control" >
+                <i class="fa fa-database" ></i>
+            </div>
+        </a>
         <div class="control" data-id="contact">
             <i class="fas fa-envelope-open"></i>
         </div>
@@ -531,7 +533,6 @@
 var resetButton = document.querySelector("#reset");
 var visitCount = localStorage.getItem("page_view");
 
-// Check if page_view entry is present
 if (visitCount) {
   visitCount = Number(visitCount) + 1;
   localStorage.setItem("page_view", visitCount);
@@ -541,14 +542,14 @@ if (visitCount) {
 }
 counterContainer.innerHTML = visitCount;
 
-// Adding onClick event listener
+
 resetButton.addEventListener("click", () => {
   visitCount = 1;
   localStorage.setItem("page_view", 1);
   counterContainer.innerHTML = visitCount;
 });
 </script>
-        </br>
+        
     </div>
     <div class="theme-btn">
         <i class="fas fa-adjust"></i>
