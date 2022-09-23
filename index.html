@@ -37,6 +37,7 @@
                 </div>
             </div>
         </div>
+        
     </header>
     <main>
         <section class="container about" id="about">
@@ -520,6 +521,34 @@
         <div class="control" data-id="contact">
             <i class="fas fa-envelope-open"></i>
         </div>
+        
+        <br data-id="#" style="background-color: #8d97a3; pointer-events: none;">
+            <i class="fa fa-eye" id="eye"></i>
+        <div class="website-counter" ></div>
+        
+        <script>
+            var counterContainer = document.querySelector(".website-counter");
+var resetButton = document.querySelector("#reset");
+var visitCount = localStorage.getItem("page_view");
+
+// Check if page_view entry is present
+if (visitCount) {
+  visitCount = Number(visitCount) + 1;
+  localStorage.setItem("page_view", visitCount);
+} else {
+  visitCount = 1;
+  localStorage.setItem("page_view", 1);
+}
+counterContainer.innerHTML = visitCount;
+
+// Adding onClick event listener
+resetButton.addEventListener("click", () => {
+  visitCount = 1;
+  localStorage.setItem("page_view", 1);
+  counterContainer.innerHTML = visitCount;
+});
+</script>
+        </br>
     </div>
     <div class="theme-btn">
         <i class="fas fa-adjust"></i>

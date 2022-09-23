@@ -49,6 +49,13 @@ a {
   color: inherit;
   font-family: inherit;
 }
+button {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+  background-color: transparent;
+}
 
 header {
   min-height: 100vh;
@@ -123,6 +130,8 @@ section {
 .controls .active-btn i {
   color: var(--color-white);
 }
+
+
 
 .theme-btn {
   top: 5%;
